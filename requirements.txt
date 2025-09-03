@@ -1,0 +1,9 @@
+mcp[cli]
+starlette
+uvicorn
+jinja2
+python-dotenv
+openai
+anthropic
+pytz
+phonenumbers

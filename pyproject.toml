@@ -1,0 +1,14 @@
+[project]
+name = "self-extending-mcp"
+version = "0.1.0"
+description = "Generalized, self-extending MCP server"
+requires-python = ">=3.10"
+dependencies = [
+  "mcp[cli]",
+  "starlette",
+  "uvicorn",
+  "jinja2",
+  "python-dotenv",
+  "pytz",
+  "phonenumbers"
+]
