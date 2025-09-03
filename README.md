@@ -35,8 +35,13 @@ graph TD
     E -->|Generate| F[Dynamic Loader]
     F -->|Register| C
     D -->|Execute| G[Result Back to Client]
+```
 
+---
 
+## 🔄 Workflow Example
+
+```mermaid
 sequenceDiagram
     participant AI as AI Client
     participant D as Dynamo MCP
@@ -55,82 +60,79 @@ sequenceDiagram
     L-->>D: Returns code
     D->>R: Save + Register tool
     D-->>AI: Return result ✅
-
-
-
-Quick Start
-1️⃣ Clone the repo
-git clone https://github.com/yourname/dynamo-mcp.git
-cd dynamo-mcp
-
-2️⃣ Install dependencies
-pip install -r requirements.txt
-
-3️⃣ Run the server
-python main.py
-
-
-
-4️⃣ Connect to your AI
-
-Claude Desktop → add dynamo-mcp in config
-
-OpenAI client → use MCP stdio transport
-
-Or call the HTTP endpoint directly
-
-⚙️ Example Usage
-
-AI asks:
-
-"What’s the time in Tokyo?"
-
-✔️ Dynamo finds time_in_timezone → returns instantly.
-
-AI asks:
-
-"Convert this text into a PDF."
-
-❌ Tool not found →
-⚡ Dynamo generates text_to_pdf with an LLM, saves it, and returns the PDF.
-✔️ Next time → tool is already available.
-
-📈 Roadmap
-
- Core MCP server
-
- Persistent registry of tools
-
- Sandbox execution (Docker/WASM isolation)
-
- Web dashboard with tool marketplace
-
- Tool versioning + rollback
-
- Global “Dynamo Hub” for shared tools
-
-🤝 Contributing
-
-We welcome your PRs! 🚀 Build new core features, improve security, or design amazing logos/UX.
-
-Fork it
-
-Create feature branch (git checkout -b feature/awesome)
-
-Commit (git commit -m "Add awesome feature")
-
-Push & PR
-
-📜 License
-
-MIT License © 2025 Talha Yousaf
-
-💡 Tagline
-
-Dynamo MCP — The last MCP server you’ll ever need.
-
+```
 
 ---
 
-Now for the **logo** 🎨:  
-Do you want me to generate a **techy neon-style AI logo** or a **minimal clean flat logo** for Dynamo MCP?
+## 🚀 Quick Start
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/yourname/dynamo-mcp.git
+cd dynamo-mcp
+```
+
+### 2️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the server
+```bash
+python main.py
+```
+
+### 4️⃣ Connect to your AI
+- Claude Desktop → add `dynamo-mcp` in config  
+- OpenAI client → use MCP stdio transport  
+- Or call the HTTP endpoint directly  
+
+---
+
+## ⚙️ Example Usage
+
+**AI asks:**  
+> "What’s the time in Tokyo?"
+
+✔️ Dynamo finds `time_in_timezone` → returns instantly.  
+
+**AI asks:**  
+> "Convert this text into a PDF."
+
+❌ Tool not found →  
+⚡ Dynamo generates `text_to_pdf` with an LLM, saves it, and returns the PDF.  
+✔️ Next time → tool is already available.  
+
+---
+
+## 📈 Roadmap
+
+- [x] Core MCP server  
+- [x] Persistent registry of tools  
+- [ ] Sandbox execution (Docker/WASM isolation)  
+- [ ] Web dashboard with tool marketplace  
+- [ ] Tool versioning + rollback  
+- [ ] Global “Dynamo Hub” for shared tools  
+
+---
+
+## 🤝 Contributing
+
+We welcome your PRs! 🚀 Build new core features, improve security, or design amazing logos/UX.
+
+1. Fork it  
+2. Create feature branch (`git checkout -b feature/awesome`)  
+3. Commit (`git commit -m "Add awesome feature"`)  
+4. Push & PR  
+
+---
+
+## 📜 License
+
+MIT License © 2025 Talha Yousaf
+
+---
+
+## 💡 Tagline
+
+> **Dynamo MCP — The last MCP server you’ll ever need.**
